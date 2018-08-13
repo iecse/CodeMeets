@@ -13,16 +13,16 @@ class minHeapObject
     {
         int l1 = 2*index;
         int l2 = (2*index) + 1;
-        int largest = index;
-        if(l1<=this.heap_length && this.heap[l1]<this.heap[largest])
-            largest = l1;
-        if(l2<=this.heap_length && this.heap[l2]<this.heap[largest])
-            largest = l2;
-        if(largest!=index)
+        int smallest = index;
+        if(l1<=this.heap_length && this.heap[l1]<this.heap[smallest])
+            smallest = l1;
+        if(l2<=this.heap_length && this.heap[l2]<this.heap[smallest])
+            smallest = l2;
+        if(smallest!=index)
         {
             int temp = this.heap[index];
-            this.heap[index] = this.heap[largest];
-            this.heap[largest] = temp;
+            this.heap[index] = this.heap[smallest];
+            this.heap[smallest] = temp;
             if((index/2)>0)
                 this.heapifyUp(index/2);
         }
@@ -31,17 +31,17 @@ class minHeapObject
     {
         int l1 = 2*index;
         int l2 = (2*index) + 1;
-        int largest = index;
-        if(l1<=this.heap_length && this.heap[l1]<this.heap[largest])
-            largest = l1;
-        if(l2<=this.heap_length && this.heap[l2]<this.heap[largest])
-            largest = l2;
-        if(largest!=index)
+        int smallest = index;
+        if(l1<=this.heap_length && this.heap[l1]<this.heap[smallest])
+            smallest = l1;
+        if(l2<=this.heap_length && this.heap[l2]<this.heap[smallest])
+            smallest = l2;
+        if(smallest!=index)
         {
             int temp = this.heap[index];
-            this.heap[index] = this.heap[largest];
-            this.heap[largest] = temp;
-            this.heapifyDown(largest);
+            this.heap[index] = this.heap[smallest];
+            this.heap[smallest] = temp;
+            this.heapifyDown(smallest);
         }
     }
 }
