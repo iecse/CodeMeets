@@ -59,7 +59,7 @@ class maxHeapObject
             return;
         }
         heap[i] = new_val;
-        while (i>=1 && (heap[i]<heap[i/2]))
+        while (i>=2 && (heap[i]>heap[i/2]))
 	    {
             int temp = heap[i];
             heap[i] = heap[i/2];
@@ -109,9 +109,11 @@ public class maxHeap
     {
         Scanner in = new Scanner(System.in);
         //Overloaded constructors to assign arrays or an empty heap
-        /*
-        int arr[] = {0,2111,4,5,1111,10,12,100};
-        maxHeapObject obj = new maxHeapObject(arr);*/
-        maxHeapObject obj = new maxHeapObject();
+        
+        /*int arr[] = {0,2111,4,5,21111,10,12,100};
+        maxHeapObject obj = new maxHeapObject(arr);
+        obj.increaseKey(2,999999);
+        obj.peek();
+        maxHeapObject obj = new maxHeapObject();*/
     }
 }

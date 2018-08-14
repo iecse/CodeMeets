@@ -53,29 +53,29 @@ class minHeapObject
     }
     public void increaseKey(int i,int new_val)
     {
-        if(new_val<=heap[i])
-        {
-            System.out.println("Value Error");
-            return;
-        }
-        heap[i] = new_val;
-        while (i>=1 && (heap[i]>heap[i/2]))
-	    {
-            int temp = heap[i];
-            heap[i] = heap[i/2];
-            heap[i/2] = temp;
-		    i/=2;
-	    }
-    }
-    public void decreaseKey(int i,int new_val)
-    {
-        if (new_val>=heap[i])
+        if (new_val<=heap[i])
 	    {
 		    System.out.println("Value Error");
 		    return;
 	    }
 	    heap[i] = new_val;
 	    heapify(i);
+    }
+    public void decreaseKey(int i,int new_val)
+    {
+        if(new_val>=heap[i])
+        {
+            System.out.println("Value Error");
+            return;
+        }
+        heap[i] = new_val;
+        while (i>=2 && (heap[i]<heap[i/2]))
+	    {
+            int temp = heap[i];
+            heap[i] = heap[i/2];
+            heap[i/2] = temp;
+		    i/=2;
+	    }
     }
     public void peek()
     {
@@ -109,9 +109,11 @@ public class minHeap
     {
         Scanner in = new Scanner(System.in);
         //Overloaded constructors to assign arrays or empty heaps
-        /*
-        int arr[] = {0,2,4,5,-1,10,12,1};
-        minHeapObject obj = new minHeapObject(arr);*/
-        minHeapObject obj = new minHeapObject();
+        
+        /*int arr[] = {0,2111,4,5,21111,10,12,100};
+        minHeapObject obj = new minHeapObject(arr);
+        obj.decreaseKey(2,-999999);
+        obj.peek();
+        minHeapObject obj = new minHeapObject();*/
     }
 }
