@@ -99,7 +99,7 @@ void increaseKey(int i, int val)
 
 	H[i] = val;
 
-	while (i >= 1 && H[i] > H[i/2])
+	while (i/2 >= 1 && H[i] > H[i/2])
 	{
 		swap(i, i/2);
 		i /= 2;
