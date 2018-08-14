@@ -4,12 +4,12 @@ class maxHeapObject
     public final int MAX_SIZE = 100;
     public int[] heap;
     public int heap_length;
-    minHeapObject()
+    maxHeapObject()
     {
         heap = new int[MAX_SIZE];
         heap_length = 0;
     }
-    minHeapObject(int arr[])
+    maxHeapObject(int arr[])
     {
         heap = arr;
         heap_length = heap.length;
@@ -20,17 +20,17 @@ class maxHeapObject
     {
         int l1 = 2*index;
         int l2 = (2*index) + 1;
-        int smallest = index;
-        if(l1<=this.heap_length && this.heap[l1]>this.heap[smallest])
-            smallest = l1;
-        if(l2<=this.heap_length && this.heap[l2]>this.heap[smallest])
-            smallest = l2;
-        if(smallest!=index)
+        int largest = index;
+        if(l1<=this.heap_length && this.heap[l1]>this.heap[largest])
+            largest = l1;
+        if(l2<=this.heap_length && this.heap[l2]>this.heap[largest])
+            largest = l2;
+        if(largest!=index)
         {
             int temp = this.heap[index];
-            this.heap[index] = this.heap[smallest];
-            this.heap[smallest] = temp;
-            this.heapify(smallest);
+            this.heap[index] = this.heap[largest];
+            this.heap[largest] = temp;
+            this.heapify(largest);
         }
     }
     public void insertKey(int x)
