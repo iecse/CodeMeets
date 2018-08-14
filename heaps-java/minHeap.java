@@ -110,10 +110,10 @@ public class minHeap
         Scanner in = new Scanner(System.in);
         //Overloaded constructors to assign arrays or empty heaps
         
-        int arr[] = {0,2111,4,5,21111,10,12,100};
+        /*int arr[] = {0,2111,4,5,21111,10,12,100};
         minHeapObject obj = new minHeapObject(arr);
         obj.decreaseKey(2,-999999);
         obj.peek();
-        //minHeapObject obj = new minHeapObject();
+        minHeapObject obj = new minHeapObject();*/
     }
 }
