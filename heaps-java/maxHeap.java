@@ -12,7 +12,7 @@ class maxHeapObject
     maxHeapObject(int arr[])
     {
         heap = arr;
-        heap_length = heap.length;
+        heap_length = heap.length-1;
         for(int i=heap_length/2;i>0;i--)
             heapify(i);
     }
@@ -108,6 +108,10 @@ public class maxHeap
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);
+        //Overloaded constructors to assign arrays or an empty heap
+        /*
+        int arr[] = {0,2111,4,5,1111,10,12,100};
+        maxHeapObject obj = new maxHeapObject(arr);*/
         maxHeapObject obj = new maxHeapObject();
     }
 }

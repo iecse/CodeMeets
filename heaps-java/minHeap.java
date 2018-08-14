@@ -12,7 +12,7 @@ class minHeapObject
     minHeapObject(int arr[])
     {
         heap = arr;
-        heap_length = heap.length;
+        heap_length = heap.length-1;
         for(int i=heap_length/2;i>0;i--)
             heapify(i);
     }
@@ -108,6 +108,10 @@ public class minHeap
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);
+        //Overloaded constructors to assign arrays or empty heaps
+        /*
+        int arr[] = {0,2,4,5,-1,10,12,1};
+        minHeapObject obj = new minHeapObject(arr);*/
         minHeapObject obj = new minHeapObject();
     }
 }
