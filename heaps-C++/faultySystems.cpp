@@ -1,3 +1,5 @@
+//---------------------------Using Priority Queue--------------------------------
+/*
 #include <iostream>
 #include <queue>
 #include <algorithm>
@@ -33,9 +35,10 @@ int main()
 	cout << profit << "\n";
 
 	return 0;
-}
+}*/
 
-/*
+//------------------------------Using Heap------------------------------------------
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -71,4 +74,3 @@ int main()
 
 	return 0;
 }
-*/
