@@ -1,1 +1,2 @@
-heaps-java/*.class
+*.class
+*.out
