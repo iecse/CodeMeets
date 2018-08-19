@@ -87,9 +87,8 @@ class maxHeapObject
             if(heap_length>1)
             {
                 int temp = heap.get(1);
-                heap.set(1,heap.get(heap_length));
-                heap.set(heap_length,temp);
-                System.out.println(heap.get(heap_length--));
+                heap.set(1,heap.get(heap_length--));
+                System.out.println(temp);
                 heapify(1);
             }
             else
@@ -108,6 +107,7 @@ public class maxHeap
         
         int arr[] = {0,2111,4,5,21111,10,12,100};
         maxHeapObject obj = new maxHeapObject(arr);
+        obj.poll();
         obj.peek();
         obj.increaseKey(2,999999);
         obj.peek();
