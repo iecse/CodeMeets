@@ -1,4 +1,3 @@
-
 def heapify(a,i):
 	right_child	= 2*i+1 
 	left_child = 2*i 

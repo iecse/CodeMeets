@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -6,8 +7,8 @@ using namespace std;
 
 //**********make changes here******************
 
-int H[] = {12, 3, 23, 7, 9, 13, 4};
-int N = 7;
+vector <int> H;
+int N;
 
 //---------------------------------------------------------------------------------------------------------
 
@@ -120,13 +121,31 @@ void decreaseKey(int i, int val)
 
 int main()
 {
+    cout << "Enter number of elements\n";
+    cin >> N;
+    
+    cout << "Enter elements\n";
+    int x;
+    
+    for (int i = 0; i < N; i++)
+    {
+        cin >> x;
+        H.push_back(x);
+    }
+    
 	buildHeap();
+	cout << "Printing current max\n";
 	printMax();
 
+    cout << "Popping max element\n";
 	popMax();
+	cout << "Printing current max\n";
 	printMax();
+
+    cout << "Entering 100 into heap\n";
 
 	insert(100);
+	cout << "Printing current max\n";
 	printMax();	
 
 	return 0;
