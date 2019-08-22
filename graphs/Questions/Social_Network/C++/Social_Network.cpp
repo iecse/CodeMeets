@@ -3,14 +3,12 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
-#include<stack>
-#include<queue>
 #include<map>
 
 using namespace std;
 #define inf -10000000000
 
-int v,e,i,a,b; 
+int i; 
 map< string , vector<string> > adj;
 map< string, bool > visited;
 long long ans=0;
