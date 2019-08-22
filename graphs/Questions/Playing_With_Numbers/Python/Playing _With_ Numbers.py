@@ -1,4 +1,4 @@
-def bread_first_modified(x, y):
+def breadth_first_modified(x, y):
     maxs = 2**32
     arr = [-1] * maxs
     queue =[x]
@@ -22,4 +22,4 @@ for _ in range(int(input())):
     if a == b:
         print("0")
     else:
-        print(bread_first_modified(a, b))
+        print(breadth_first_modified(a, b))
