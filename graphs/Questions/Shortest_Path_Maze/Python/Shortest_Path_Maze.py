@@ -1,3 +1,5 @@
+## Question Link : https://www.codechef.com/problems/DAY4P2
+
 def isValid(x, y, dist, mat, m, n):
     return x>=0 and x < m and y >=0 and y<n and dist[x][y] == -1 and mat[x][y] != '#'
 

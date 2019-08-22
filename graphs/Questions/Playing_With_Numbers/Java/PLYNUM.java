@@ -1,3 +1,5 @@
+//Question Link:  https://www.codechef.com/ENAU2018/problems/PLYNUM
+
 import java.util.*;
 class PLYNUM{
 

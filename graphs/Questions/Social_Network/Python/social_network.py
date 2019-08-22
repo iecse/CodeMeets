@@ -1,3 +1,5 @@
+## Question Link:  https://www.codechef.com/problems/SNET
+
 from collections import defaultdict
 
 adj = defaultdict(list)

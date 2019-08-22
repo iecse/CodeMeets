@@ -1,3 +1,5 @@
+// Question Link:  https://www.codechef.com/ENAU2018/problems/PLYNUM
+
 #include<bits/stdc++.h>
 using namespace std;
 

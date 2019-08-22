@@ -1,3 +1,6 @@
+// Question Link: https://www.codechef.com/problems/DAY4P2
+
+
 #include <bits/stdc++.h>
 #define ll long long
 #define vi vector<int>

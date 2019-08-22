@@ -1,3 +1,5 @@
+//Question Link:  https://www.codechef.com/problems/SNET
+
 import java.util.*;
 class SNET{
 
