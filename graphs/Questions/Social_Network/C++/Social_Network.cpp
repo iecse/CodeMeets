@@ -37,8 +37,8 @@ int main()
     {
         string u,v;
         cin>>u>>v;
-        adj[u].__emplace_back(v); 
-        adj[v].__emplace_back(u);
+        adj[u].push_back(v); 
+        adj[v].push_back(u);
     }
 
     sort(adj[s].begin(),adj[s].end());
