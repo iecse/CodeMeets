@@ -19,7 +19,7 @@ int main()
 	}
 	
 	// Printing the List
-	for(int i = 1; i <= e ; i++)
+	for(int i = 1; i <= vertex ; i++)
     {
         cout<<i<<" ";
         for(int t = 0; t < v[i].size() ; t++)
