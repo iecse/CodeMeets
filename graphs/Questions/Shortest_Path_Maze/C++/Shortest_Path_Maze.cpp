@@ -2,12 +2,14 @@
 
 
 #include <bits/stdc++.h>
-#define ll long long
-#define vi vector<int>
 using namespace std;
-bool IsValid(int curr_x, int curr_y, int dist[][1001], char mat[][1001], int m,int n){
-	return (curr_x >= 0 && curr_x < m) && (curr_y >= 0 && curr_y < n) && dist[curr_x][curr_y] == -1 &&
-                    mat[curr_x][curr_y] != '#';
+//To check if the location to traverse is valid
+bool IsValid(int curr_x, int curr_y, 
+             int dist[][1001], char mat[][1001], int m,int n){
+	return curr_x >= 0 && curr_x < m
+               && curr_y >= 0 && curr_y < n
+               && dist[curr_x][curr_y] == -1 
+               && mat[curr_x][curr_y] != '#';
 }
 int main() {
     int m, n, i, j, x, y;
@@ -27,7 +29,6 @@ int main() {
         cin >> str;
         for (j=0; j<n; j++) {
             mat[i][j] = str[j];
-            dist[i][j] = -1;
             if (str[j] == 'S') {
                 srcx = i; srcy = j;
             } 
@@ -43,14 +44,18 @@ int main() {
     while (!Q.empty()) {
         x = Q.front().first;
         y = Q.front().second;
+        //If we have found the path to end node
         if(x==exitx&&y==exity){
         	break;
         }
         Q.pop();
+        //To check all 4 combinations
         for (int i=0; i<4; i++) {
             int curr_x = x+ci[i];
             int curr_y = y+cj[i];
             if (IsValid(curr_x, curr_y, dist, mat, m, n)) {
+                //For pushing valid paths into queue and
+                //Incrementing distance
                 Q.push({curr_x, curr_y});
                 dist[curr_x][curr_y] = dist[x][y] + 1;
                
