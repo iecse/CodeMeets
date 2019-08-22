@@ -35,7 +35,7 @@ class Adjacency
         }
 
         // Printing the List
-        for(int i = 1; i <= edge ; i++)
+        for(int i = 1; i <= vertex ; i++)
         {
             System.out.print(i+"-->\t{");
             for(int t = 0; t < v[i].size() ; t++)
